@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MovieActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Todo implement progress var </-->
+        <!-- <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="380dp"
+            android:layout_height="300dp"
+            android:indeterminate="false"
+            android:layout_marginTop="-210dp"
+            android:layout_marginLeft="-9dp"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:background="@drawable/circle_shape"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="100"
+            android:progress="65"
+            app:layout_constraintBottom_toBottomOf="@+id/moviesImage"
+            app:layout_constraintEnd_toEndOf="@+id/moviesImage"
+            app:layout_constraintStart_toStartOf="@+id/moviesImage"
+            app:layout_constraintTop_toTopOf="@+id/moviesImage" /></-->
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:paddingTop="20dp"
+            android:text="@string/movieTitle"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorG"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!--<ImageButton
+            android:id="@+id/favorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/baseline_favorite_black_36"
+            android:backgroundTint="@color/colorG"
+            android:clickable="true"
+            android:isIndicator="true"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:numStars="1"
+            android:stepSize="1"
+            app:layout_constraintBottom_toTopOf="@+id/genres"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@+id/moviesImage"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="SpeakableTextPresentCheck" /><-->
+
+        <!--<TextView
+            android:id="@+id/genres"
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="genres"
+            android:textAlignment="center"
+            android:textColor="@color/colorG"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="152dp" /></-->
+
+        <ImageView
+            android:id="@+id/moviesImage"
+            android:layout_width="267dp"
+            android:layout_height="367dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/movie_poster_placeholder"
+            android:backgroundTint="@color/colorE"
+            android:paddingBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.388"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/releaseDate"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/changePic"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/moviesImage"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="22dp"
+            android:backgroundTint="@color/colorE"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/rating"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toRightOf="@id/moviesImage"
+            app:layout_constraintStart_toStartOf="@+id/moviesImage"
+            app:layout_constraintTop_toBottomOf="@+id/releaseDate"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/baseline_photo_camera_black_36"
+            app:tint="@color/colorG">
+
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/releaseDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="release date"
+            android:textAlignment="center"
+            android:textColor="@color/colorG"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <RatingBar
+            android:id="@+id/rating"
+            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            android:isIndicator="true"
+            android:numStars="10"
+            android:progressTint="@color/colorG"
+            android:stepSize="0.1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/moviesImage" />
+
+        <TextView
+            android:id="@+id/ratingText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="10"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorG"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rating"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <!--<TextView
+            android:id="@+id/directors"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/directors"
+            android:textAlignment="center"
+            android:textColor="@color/colorG"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingText" /></-->
+
+        <!--<TextView
+            android:id="@+id/cast"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/cast"
+            android:textAlignment="center"
+            android:textColor="@color/colorG"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/directors" /></-->
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/description"
+            android:textAlignment="center"
+            android:textColor="@color/colorG"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingText" />
+
+
+       <!-- <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="380dp"
+            android:layout_height="204dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            tools:ignore="MissingConstraints" /></-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

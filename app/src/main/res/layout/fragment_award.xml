@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AwardFragment"
+    android:background="@drawable/background">
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="@string/award"
+        android:layout_marginTop="8dp"
+        android:paddingTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="80dp"
+        android:textColor="@color/colorG"
+        android:textSize="22sp"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutAw"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/colorS"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:tabIndicator="@color/colorE"
+        app:tabSelectedTextColor="@color/colorG"
+        app:tabTextColor="@color/colorS"
+        tools:ignore="SpeakableTextPresentCheck">
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/AwardViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="122dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</FrameLayout>

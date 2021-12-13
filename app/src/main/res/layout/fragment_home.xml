@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    android:id="@+id/fragment_container"
+    tools:context=".HomeFragment"
+    app:menu="@menu/drawer_menu" >
+    <!--<<LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="61dp"
+        android:paddingTop="8dp"
+        android:orientation="horizontal">
+
+        EditText
+            android:id="@+id/filterTitle"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:paddingTop="15dp"
+            android:hint="@string/filter_input" />
+    </LinearLayout></-->
+
+    <!-- <com.example.moviesapp.CircleProgressView
+         android:id="@+id/progress_view"
+         android:layout_width="100dp"
+         android:layout_height="100dp"
+         android:layout_margin="10dp"
+         android:visibility="gone" /></-->
+
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/recyclerview_movies"
+         android:layout_width="match_parent"
+         android:layout_height="530dp"
+         android:layout_marginTop="8dp"
+         android:paddingTop="20dp">
+
+     </androidx.recyclerview.widget.RecyclerView>
+
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:id="@+id/pagination"
+         android:layout_marginTop="530dp"
+         android:backgroundTint="@color/colorE"
+         android:layout_width="match_parent"
+         android:layout_height="76dp">
+
+         <Button
+             android:id="@+id/buttonNext"
+             android:layout_width="110dp"
+             android:layout_height="wrap_content"
+             android:layout_marginEnd="16dp"
+             android:layout_marginBottom="16dp"
+             android:background="@drawable/rounded_corners"
+             android:text="@string/next"
+             android:textColor="@color/colorG"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent" />
+
+         <Button
+             android:id="@+id/buttonPrev"
+             android:layout_width="110dp"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="16dp"
+             android:layout_marginBottom="16dp"
+             android:background="@drawable/rounded_corners"
+             android:text="@string/previous"
+             android:textColor="@color/colorG"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintStart_toStartOf="parent" />
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+ </FrameLayout>
